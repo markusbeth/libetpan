@@ -185,7 +185,7 @@ int mail_tcp_connect_with_local_address(const char * server, uint16_t port,
 
 #ifndef WIN32
 #include <sys/un.h>
-int mail_unix_connect_socket(const char *path)
+static int mail_unix_connect_socket(const char *path)
 {
  struct sockaddr_un sa;
  int s;
