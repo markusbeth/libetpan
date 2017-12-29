@@ -844,6 +844,7 @@ int mailmh_folder_remove_message(struct mailmh_folder * folder,
     goto free;
   }
 
+  free(filename);
   key.data = &indx;
   key.len = sizeof(indx);
   r = chash_get(folder->fl_msgs_hash, &key, &data);
