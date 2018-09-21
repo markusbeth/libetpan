@@ -335,7 +335,7 @@ void mailmime_field_free(struct mailmime_field * field)
   case MAILMIME_FIELD_LOCATION:
     if (field->fld_data.fld_location != NULL)
       mailmime_location_free(field->fld_data.fld_location);
-      break;
+    break;
   }
 
   free(field);
